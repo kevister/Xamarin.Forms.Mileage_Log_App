@@ -57,7 +57,7 @@ namespace Todo
                     var todos = App.Database.GetItemsNotDone();
                     var tospeak = "";
                     foreach (var t in todos)
-                        tospeak += t.Name + " ";
+                        tospeak += t.ID + " ";
                     if (tospeak == "") tospeak = "there are no tasks to do";
 
                     DependencyService.Get<ITextToSpeech>().Speak(tospeak);

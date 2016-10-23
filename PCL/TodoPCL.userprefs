@@ -1,9 +1,24 @@
-﻿<Properties StartupConfiguration="{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}|Default">
+﻿<Properties StartupConfiguration="{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2424E8AC-4834-4913-BF69-E914667BB6F2" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
+    <Files>
+      <File FileName="Todo/Models/TodoItem.cs" Line="15" Column="19" />
+      <File FileName="Todo/Data/TodoItemDatabase.cs" Line="50" Column="22" />
+      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="72" Column="1" />
+      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="8" Column="1" />
+      <File FileName="PCL Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Todo.Android/Todo.Android.csproj</String>
+    <String>Todo.UWP/Todo.UWP.csproj</String>
+    <String>Todo.Windows/Todo.Windows.csproj</String>
+    <String>Todo.WinPhone/Todo.WinPhone.csproj</String>
+    <String>Todo.WinPhone81/Todo.WinPhone81.csproj</String>
+  </DisabledProjects>
 </Properties>

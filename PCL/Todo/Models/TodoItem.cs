@@ -11,8 +11,8 @@ namespace Todo
 
 		[PrimaryKey, AutoIncrement]
 		public int ID { get; set; }
-		public string Name { get; set; }
-		public string Notes { get; set; }
+		public string SO { get; set; }
+		public string EO { get; set; }
 		public bool Done { get; set; }
 	}
 }

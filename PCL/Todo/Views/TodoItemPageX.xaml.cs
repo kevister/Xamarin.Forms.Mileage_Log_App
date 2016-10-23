@@ -35,7 +35,7 @@ namespace Todo
         void speakClicked(object sender, EventArgs e)
         {
             var todoItem = (TodoItem)BindingContext;
-            DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
+            DependencyService.Get<ITextToSpeech>().Speak(todoItem.SO + " " + todoItem.EO);
         }
     }
 }
