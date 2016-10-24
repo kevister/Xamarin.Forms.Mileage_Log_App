@@ -14,10 +14,10 @@ namespace MasterDetailPageNavigation
 			{
 				tbi = new ToolbarItem("+", null, () =>
 				{
-					//var todoItem = new TodoItem();
-					var todoPage = new ReminderPage();
-					//todoPage.BindingContext = todoItem;
-					Navigation.PushAsync(todoPage);
+					var logItem = new LogItem();
+					var logPage = new LogItemPage();
+					logPage.BindingContext = logItem;
+					Navigation.PushAsync(logPage);
 				}, 0, 0);
 			}
 
@@ -29,7 +29,7 @@ namespace MasterDetailPageNavigation
 		void listItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			var logItem = (LogItem)e.SelectedItem;
-			var logPage = new ReminderPage();
+			var logPage = new LogItemPage();
 			//todoPage.BindingContext = todoItem;
 
 			//((App)App.Current).ResumeAtTodoId = todoItem.ID;
