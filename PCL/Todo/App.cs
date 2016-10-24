@@ -14,7 +14,7 @@ namespace Todo
 			Resources.Add ("primaryGreen", Color.FromHex("91CA47"));
 			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
 
-			var nav = new NavigationPage (new TodoItemListX ());
+			var nav = new NavigationPage (new HomePage ());
 			nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
 			nav.BarTextColor = Color.White;
 
@@ -38,23 +38,28 @@ namespace Todo
 
 			// always re-set when the app starts
 			// users expect this (usually)
-//			Properties ["ResumeAtTodoId"] = "";
-			if (Properties.ContainsKey ("ResumeAtTodoId")) {
-				var rati = Properties ["ResumeAtTodoId"].ToString();
-				Debug.WriteLine ("   rati="+rati);
-				if (!String.IsNullOrEmpty (rati)) {
-					Debug.WriteLine ("   rati = " + rati);
-					ResumeAtTodoId = int.Parse (rati);
+			//			Properties ["ResumeAtTodoId"] = "";
+			if (Properties.ContainsKey("ResumeAtTodoId"))
+			{
+				var rati = Properties["ResumeAtTodoId"].ToString();
+				Debug.WriteLine("   rati=" + rati);
+				if (!String.IsNullOrEmpty(rati))
+				{
+					Debug.WriteLine("   rati = " + rati);
+					ResumeAtTodoId = int.Parse(rati);
 
-					if (ResumeAtTodoId >= 0) {
-						var todoPage = new TodoItemPageX ();
-						todoPage.BindingContext = Database.GetItem (ResumeAtTodoId);
+					if (ResumeAtTodoId >= 0)
+					{
+						var todoPage = new TodoItemPageX();
+						todoPage.BindingContext = Database.GetItem(ResumeAtTodoId);
 
-						MainPage.Navigation.PushAsync (
-							todoPage,
-							false); // no animation
+						MainPage.Navigation.PushAsync(
+							new HomePage(), false); // no animation
 					}
 				}
+			}
+			else {
+				MainPage.Navigation.PushAsync(new HomePage(), false);
 			}
 		}
 		protected override void OnSleep()
