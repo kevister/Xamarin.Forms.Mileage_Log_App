@@ -13,9 +13,9 @@ namespace MasterDetailPageNavigation
 
 			var masterPageItems = new List<MasterPageItem> ();
 			masterPageItems.Add (new MasterPageItem {
-				Title = "Contacts",
+				Title = "Log",
 				IconSource = "contacts.png",
-				TargetType = typeof(ContactsPage)
+				TargetType = typeof(LogPage)
 			});
 			masterPageItems.Add (new MasterPageItem {
 				Title = "TodoList",
