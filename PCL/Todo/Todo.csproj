@@ -41,10 +41,8 @@
       <DependentUpon>TodoItemPageX.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TodoListPage.cs" />
-    <Compile Include="Views\TodoItemPage.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Data\TodoItemDatabase.cs" />
-    <Compile Include="Views\TodoItemCell.cs" />
     <Compile Include="ITextToSpeech.cs" />
     <Compile Include="ISQLite.cs" />
     <Compile Include="Views\HomePage.xaml.cs">
@@ -57,6 +55,7 @@
     <Compile Include="Views\MDPage.xaml.cs">
       <DependentUpon>MDPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DateViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

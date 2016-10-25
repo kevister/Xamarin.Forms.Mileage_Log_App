@@ -13,7 +13,9 @@ namespace Todo
 		public int ID { get; set; }
 		public string SO { get; set; }
 		public string EO { get; set; }
-		public bool Done { get; set; }
+		public string Comments { get; set; }
+		public DateTime TimeStamp { get; set; }
+
 	}
 }
 

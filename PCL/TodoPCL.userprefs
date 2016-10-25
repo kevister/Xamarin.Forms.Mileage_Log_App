@@ -2,23 +2,16 @@
   <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2424E8AC-4834-4913-BF69-E914667BB6F2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
     <Files>
-      <File FileName="Todo/Views/MDPage.xaml.cs" Line="16" Column="55" />
-      <File FileName="Todo/Views/MasterPage.xaml.cs" Line="26" Column="1" />
-      <File FileName="Todo/Views/MasterPageItem.cs" Line="7" Column="15" />
+      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="25" Column="38" />
+      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="82" Column="1" />
+      <File FileName="Todo/Models/TodoItem.cs" Line="17" Column="28" />
       <File FileName="PCL Status" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>path</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Kevin/Downloads/Todo 2/Xamarin_Telus/PCL/Todo/Views/MDPage.xaml" line="6" column="1" />
+      <Breakpoint file="/Users/Kevin/Downloads/Todo 2/Xamarin_Telus/PCL/Todo/Views/TodoItemListX.xaml.cs" line="82" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

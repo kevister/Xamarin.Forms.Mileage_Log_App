@@ -125,6 +125,7 @@
     <BundleResource Include="Resources\check.png" />
     <BundleResource Include="Resources\log.png" />
     <BundleResource Include="Resources\log2x.png" />
+    <BundleResource Include="Resources\telus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
