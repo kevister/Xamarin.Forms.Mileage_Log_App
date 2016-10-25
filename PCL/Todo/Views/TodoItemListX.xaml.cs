@@ -15,6 +15,8 @@ namespace Todo
         {
             InitializeComponent();
 
+			//NavigationPage.SetHasNavigationBar(this, false);
+
             #region toolbar
             ToolbarItem tbi = null;
             if (Device.OS == TargetPlatform.iOS)

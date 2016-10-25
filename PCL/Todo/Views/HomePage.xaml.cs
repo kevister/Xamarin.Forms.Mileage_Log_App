@@ -15,7 +15,7 @@ namespace Todo
 		}
 		void startClicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushAsync(new TodoItemListX());
+			this.Navigation.PushAsync(new MDPage());
 		}
 	}
 }

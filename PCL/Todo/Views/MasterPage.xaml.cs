@@ -17,8 +17,8 @@ namespace Todo
 			var masterPageItems = new List<MasterPageItem>();
 			masterPageItems.Add(new MasterPageItem
 			{
-				Title = "Contacts",
-				//IconSource = "contacts.png",
+				Title = "Log",
+				IconSource = "log.png",
 				TargetType = typeof(TodoItemListX)
 			});
 
