@@ -12,9 +12,10 @@
                          Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand">
               
-                <Label Text="{Binding SO}"
+                <!--<Label Text="{Binding TimeStamp, StringFormat='Log for {0:MM-dd}'}"
                        VerticalTextAlignment="Center" 
-                       HorizontalOptions="StartAndExpand" />
+                       HorizontalOptions="StartAndExpand" />-->
+				<Label Text="{Binding Comments}" VerticalOptions="Center"></Label>
                 <!--<Image Source="check.png" 
                        HorizontalOptions="End"
                        IsVisible="{Binding Done}"/>-->

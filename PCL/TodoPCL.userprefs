@@ -2,19 +2,19 @@
   <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2424E8AC-4834-4913-BF69-E914667BB6F2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
     <Files>
-      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="25" Column="38" />
-      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="82" Column="1" />
+      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="24" Column="1" />
+      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="81" Column="1" />
       <File FileName="Todo/Models/TodoItem.cs" Line="17" Column="28" />
       <File FileName="PCL Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Kevin/Downloads/Todo 2/Xamarin_Telus/PCL/Todo/Views/TodoItemListX.xaml.cs" line="82" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Todo/Views/TodoItemPageX.xaml.cs" line="19" offsetX="371" offsetY="270" expression="dateSelected" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <DisabledProjects>
     <String>Todo.Android/Todo.Android.csproj</String>
     <String>Todo.UWP/Todo.UWP.csproj</String>

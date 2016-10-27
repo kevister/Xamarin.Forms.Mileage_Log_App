@@ -1,49 +1,36 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="Todo.TodoItemPageX"
-             Title="{Binding SO}">
-	
-  <StackLayout VerticalOptions="StartAndExpand" Padding="20">
-    
-    <Label Text="Start Odometer" />
-    <Entry x:Name="SO" Text="{Binding SO}" />
-    <Label Text="End Odometer" />
-    <Entry x:Name="EO" Text="{Binding EO}" />
-    <Label Text="Comments" />
-	<Entry x:Name="Comments" Text="{Binding Comments}"/>
-
-	<Label Text="Date"></Label>
-	<DatePicker x:Name="datePicker"
-				VerticalOptions="CenterAndExpand" 
-				Date="{x:Static sys:DateTime.Now}"
-				DateSelected="DateSelected">
-         <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
-         <DatePicker.MinimumDate>
-            <sys:DateTime x:FactoryMethod="Parse">
-               <x:Arguments>
-                  <x:String>Jan 1 2000</x:String>
-               </x:Arguments>
-            </sys:DateTime>
-         </DatePicker.MinimumDate>
-         <DatePicker.MaximumDate>
-            <sys:DateTime x:FactoryMethod="Parse">
-               <x:Arguments>
-                  <x:String>Dec 31 2050</x:String>
-               </x:Arguments>
-            </sys:DateTime>
-         </DatePicker.MaximumDate>
-    </DatePicker>
-
-    <Button Text="Save" Clicked="saveClicked"/>
-
-    <Button Text="Delete" Clicked="deleteClicked"/>
-
-    <Button Text="Cancel" Clicked="cancelClicked"/>
-
-<!--    <Button Text="Speak" Clicked="speakClicked"/>-->
-
-  </StackLayout>
-
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Class="Todo.TodoItemPageX" Title="{Binding SO}">
+	<ScrollView>
+		<StackLayout VerticalOptions="StartAndExpand" Padding="20">
+			<Label Text="Start Odometer" />
+			<Entry x:Name="SO" BackgroundColor="#fbfaf9" Text="{Binding SO}" />
+			<Label Text="End Odometer" />
+			<Entry x:Name="EO" BackgroundColor="#fbfaf9" Text="{Binding EO}" />
+			<Label Text="Comments" />
+			<Editor x:Name="Comments" BackgroundColor="#fbfaf9" Text="{Binding Comments}" HeightRequest="200" />
+			<Label Text="Date">
+			</Label>
+			<DatePicker x:Name="datePicker" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" DateSelected="DateSelected">
+				<DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+				<DatePicker.MinimumDate>
+					<sys:DateTime x:FactoryMethod="Parse">
+						<x:Arguments>
+							<x:String>Jan 1 2000</x:String>
+						</x:Arguments>
+					</sys:DateTime>
+				</DatePicker.MinimumDate>
+				<DatePicker.MaximumDate>
+					<sys:DateTime x:FactoryMethod="Parse">
+						<x:Arguments>
+							<x:String>Dec 31 2050</x:String>
+						</x:Arguments>
+					</sys:DateTime>
+				</DatePicker.MaximumDate>
+			</DatePicker>
+			<Button Text="Save" Clicked="saveClicked" />
+			<Button Text="Delete" Clicked="deleteClicked" />
+			<Button Text="Cancel" Clicked="cancelClicked" />
+			<!--    <Button Text="Speak" Clicked="speakClicked"/>-->
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
