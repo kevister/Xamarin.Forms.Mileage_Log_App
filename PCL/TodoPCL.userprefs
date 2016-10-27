@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2424E8AC-4834-4913-BF69-E914667BB6F2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
     <Files>
-      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="24" Column="1" />
-      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="81" Column="1" />
       <File FileName="Todo/Models/TodoItem.cs" Line="17" Column="28" />
+      <File FileName="Todo/Views/MasterPage.xaml.cs" Line="36" Column="33" />
+      <File FileName="Todo/Views/ExportPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Todo/Views/LinkPage.xaml.cs" Line="1" Column="1" />
       <File FileName="PCL Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

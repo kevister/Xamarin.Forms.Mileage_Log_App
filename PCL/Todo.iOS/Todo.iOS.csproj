@@ -126,6 +126,13 @@
     <BundleResource Include="Resources\log.png" />
     <BundleResource Include="Resources\log2x.png" />
     <BundleResource Include="Resources\telus.png" />
+    <BundleResource Include="Resources\link.png" />
+    <BundleResource Include="Resources\link2x.png" />
+    <BundleResource Include="Resources\export.png" />
+    <BundleResource Include="Resources\export2x.png" />
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

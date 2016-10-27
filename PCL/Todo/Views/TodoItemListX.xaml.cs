@@ -21,7 +21,7 @@ namespace Todo
             ToolbarItem tbi = null;
             if (Device.OS == TargetPlatform.iOS)
             {
-                tbi = new ToolbarItem("+", null, () =>
+                tbi = new ToolbarItem("+", "add.png", () =>
                 {
                     var todoItem = new TodoItem();
                     var todoPage = new TodoItemPageX();
@@ -54,15 +54,15 @@ namespace Todo
 
             if (Device.OS == TargetPlatform.iOS)
             {
-                var tbi2 = new ToolbarItem("?", null, () =>
+                var tbi2 = new ToolbarItem("Calendar", "calendar.png", () =>
                 {
-                    var todos = App.Database.GetItemsNotDone();
-                    var tospeak = "";
-                    foreach (var t in todos)
-                        tospeak += t.ID + " ";
-                    if (tospeak == "") tospeak = "there are no tasks to do";
+                    //var todos = App.Database.GetItemsNotDone();
+                    //var tospeak = "";
+                    //foreach (var t in todos)
+                    //    tospeak += t.ID + " ";
+                    //if (tospeak == "") tospeak = "there are no tasks to do";
 
-                    DependencyService.Get<ITextToSpeech>().Speak(tospeak);
+                    //DependencyService.Get<ITextToSpeech>().Speak(tospeak);
                 }, 0, 0);
                 ToolbarItems.Add(tbi2);
             }

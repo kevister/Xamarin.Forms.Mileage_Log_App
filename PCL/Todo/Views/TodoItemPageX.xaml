@@ -28,7 +28,7 @@
 				</DatePicker.MaximumDate>
 			</DatePicker>
 			<Button Text="Save" Clicked="saveClicked" />
-			<Button Text="Delete" Clicked="deleteClicked" />
+			<Button Text="Delete" Clicked="deleteClicked" TextColor="Red"/>
 			<Button Text="Cancel" Clicked="cancelClicked" />
 			<!--    <Button Text="Speak" Clicked="speakClicked"/>-->
 		</StackLayout>

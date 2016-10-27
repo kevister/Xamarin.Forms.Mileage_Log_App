@@ -22,6 +22,20 @@ namespace Todo
 				TargetType = typeof(TodoItemListX)
 			});
 
+			masterPageItems.Add(new MasterPageItem
+			{
+				Title = "Export",
+				IconSource = "export.png",
+				TargetType = typeof(ExportPage)
+			});
+
+			masterPageItems.Add(new MasterPageItem
+			{
+				Title = "Links",
+				IconSource = "link.png",
+				TargetType = typeof(LinkPage)
+			});
+
 			listView.ItemsSource = masterPageItems;
 		}
 	}
