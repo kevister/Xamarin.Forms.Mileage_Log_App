@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Class="Todo.TodoItemPageX" Title="{Binding SO}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+		x:Class="Todo.TodoItemPageX" 
+		Title="{Binding Comments}">
 	<ScrollView>
 		<StackLayout VerticalOptions="StartAndExpand" Padding="20">
 			<Label Text="Start Odometer" />
@@ -10,7 +14,7 @@
 			<Editor x:Name="Comments" BackgroundColor="#fbfaf9" Text="{Binding Comments}" HeightRequest="200" />
 			<Label Text="Date">
 			</Label>
-			<DatePicker x:Name="datePicker" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}" DateSelected="DateSelected">
+			<DatePicker x:Name="datePicker" VerticalOptions="CenterAndExpand" Date="{Binding TimeStamp}" DateSelected="DateSelected">
 				<DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
 				<DatePicker.MinimumDate>
 					<sys:DateTime x:FactoryMethod="Parse">
@@ -30,7 +34,6 @@
 			<Button Text="Save" Clicked="saveClicked" />
 			<Button Text="Delete" Clicked="deleteClicked" TextColor="Red"/>
 			<Button Text="Cancel" Clicked="cancelClicked" />
-			<!--    <Button Text="Speak" Clicked="speakClicked"/>-->
 		</StackLayout>
 	</ScrollView>
 </ContentPage>

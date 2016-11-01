@@ -24,6 +24,7 @@ namespace Todo
                 tbi = new ToolbarItem("+", "add.png", () =>
                 {
                     var todoItem = new TodoItem();
+					todoItem.TimeStamp = DateTime.Now;
                     var todoPage = new TodoItemPageX();
                     todoPage.BindingContext = todoItem;
                     Navigation.PushAsync(todoPage);
@@ -54,16 +55,19 @@ namespace Todo
 
             if (Device.OS == TargetPlatform.iOS)
             {
-                var tbi2 = new ToolbarItem("Calendar", "calendar.png", () =>
-                {
-                    //var todos = App.Database.GetItemsNotDone();
-                    //var tospeak = "";
-                    //foreach (var t in todos)
-                    //    tospeak += t.ID + " ";
-                    //if (tospeak == "") tospeak = "there are no tasks to do";
-
-                    //DependencyService.Get<ITextToSpeech>().Speak(tospeak);
-                }, 0, 0);
+                var tbi2 = new ToolbarItem("Calendar", "calendar.png", async () =>
+				{
+					//DatePicker datePicker = new DatePicker
+					//{
+					//	Format = "yyyy-MM-dd",
+					//	VerticalOptions = LayoutOptions.CenterAndExpand,
+					//	IsVisible = true,
+					//	IsEnabled = true,
+					//};
+					var action = await DisplayActionSheet("Search by ...", "Cancel", null, "Month", "Day");
+					if (Navigation != null)
+						await Navigation.PushAsync(new DatePickerPage(action));
+				}, 0, 0);
                 ToolbarItems.Add(tbi2);
             }
             #endregion

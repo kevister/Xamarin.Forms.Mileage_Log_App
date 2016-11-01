@@ -12,7 +12,18 @@ namespace Todo
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, true);
-        }
+
+			#region toolbar
+			ToolbarItem tbi = null;
+			if (Device.OS == TargetPlatform.iOS)
+			{
+				tbi = new ToolbarItem("share", "link.png", () =>
+				{
+					
+				}, 0, 0);
+			}
+			#endregion
+		}
 
 		void DateSelected(object sender, Xamarin.Forms.DateChangedEventArgs e)
 		{
