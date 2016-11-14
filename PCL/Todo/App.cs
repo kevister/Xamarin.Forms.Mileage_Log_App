@@ -15,8 +15,8 @@ namespace Todo
 			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
 
 			var nav = new NavigationPage (new HomePage ());
-			nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
-			nav.BarTextColor = Color.White;
+			//nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
+			//nav.BarTextColor = Color.Black;
 
 			MainPage = nav;
 		}

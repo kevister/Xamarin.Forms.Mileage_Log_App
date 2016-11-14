@@ -33,6 +33,7 @@
 			</DatePicker>
 			<Button Text="Save" Clicked="saveClicked" />
 			<Button Text="Delete" Clicked="deleteClicked" TextColor="Red"/>
+			<Button Text="Export" Clicked="exportClicked"/>
 			<Button Text="Cancel" Clicked="cancelClicked" />
 		</StackLayout>
 	</ScrollView>

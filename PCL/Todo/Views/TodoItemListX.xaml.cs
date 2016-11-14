@@ -15,8 +15,6 @@ namespace Todo
         {
             InitializeComponent();
 
-			//NavigationPage.SetHasNavigationBar(this, false);
-
             #region toolbar
             ToolbarItem tbi = null;
             if (Device.OS == TargetPlatform.iOS)
@@ -65,8 +63,11 @@ namespace Todo
 					//	IsEnabled = true,
 					//};
 					var action = await DisplayActionSheet("Search by ...", "Cancel", null, "Month", "Day");
+					var datePicked = new DatePicked();
+					var datepickerPage = new DatePickerPage(action);
+					datepickerPage.BindingContext = datePicked;
 					if (Navigation != null)
-						await Navigation.PushAsync(new DatePickerPage(action));
+						await Navigation.PushAsync(datepickerPage);
 				}, 0, 0);
                 ToolbarItems.Add(tbi2);
             }

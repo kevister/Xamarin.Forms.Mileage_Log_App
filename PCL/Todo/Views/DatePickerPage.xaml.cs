@@ -16,11 +16,20 @@ namespace Todo
 				PickDay.IsVisible = false;
 				PickDay.IsEnabled = false;
 			}
-			else {
+			else
+			{
 				PickDay.IsVisible = true;
 				PickDay.IsEnabled = true;
 			}
 
+		}
+
+		void doneClicked(object sender, EventArgs e)
+		{
+			var datePicked = (DatePicked)BindingContext;
+			var datePickedList = new DatePickedList(datePicked);
+
+			Navigation.PushAsync(datePickedList);
 		}
 	}
 }
