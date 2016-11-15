@@ -12,7 +12,7 @@
 							<!--<Label Text="{Binding TimeStamp, StringFormat='Log for {0:MM-dd}'}"
                        VerticalTextAlignment="Center" 
                        HorizontalOptions="StartAndExpand" />-->
-							<Label Text="{Binding Comments}" VerticalOptions="Center">
+							<Label Text="{Binding Label}" VerticalOptions="Center">
 							</Label>
 						</StackLayout>
 					</ViewCell.View>

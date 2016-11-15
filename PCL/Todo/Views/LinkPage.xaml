@@ -4,6 +4,6 @@
 		x:Class="Todo.LinkPage"
 		Title="Links">
 	<ContentPage.Content>
-		<Label Text="www.google.com"></Label>
+		<Label Text="http://www.google.com" x:Name="link"></Label>
 	</ContentPage.Content>
 </ContentPage>

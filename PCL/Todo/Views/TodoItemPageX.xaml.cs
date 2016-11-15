@@ -38,8 +38,9 @@ namespace Todo
             var todoItem = (TodoItem)BindingContext;
 			if (dateSelected.Year != 0001)			//make sure user selected a different date, otherwise use today's date
 				todoItem.TimeStamp = dateSelected;
-			if (todoItem.Comments == null)
-				todoItem.Comments = "#No Comments";
+			todoItem.Label = todoItem.Comments + " ON " + todoItem.TimeStamp.Date.ToString("d");
+			if (todoItem.Label == null)
+				todoItem.Comments = "#No Name";
             App.Database.SaveItem(todoItem);
             this.Navigation.PopAsync();
 		}

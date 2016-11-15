@@ -4,6 +4,6 @@
 		x:Class="Todo.ExportPage"
 		Title="Export">
 	<ContentPage.Content>
-		<Button Text="Export"></Button>
+		<Button Text="Export" x:Name="export"></Button>
 	</ContentPage.Content>
 </ContentPage>

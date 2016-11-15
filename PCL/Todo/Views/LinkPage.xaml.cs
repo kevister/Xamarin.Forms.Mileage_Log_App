@@ -10,6 +10,13 @@ namespace Todo
 		public LinkPage()
 		{
 			InitializeComponent();
+
+			var tapGestureRecognizer = new TapGestureRecognizer();
+			tapGestureRecognizer.Tapped += (s, e) =>
+			{
+				Device.OpenUri(new Uri(((Label)s).Text));
+			};
+			link.GestureRecognizers.Add(tapGestureRecognizer);
 		}
 	}
 }

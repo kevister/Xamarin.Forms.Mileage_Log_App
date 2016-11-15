@@ -11,6 +11,19 @@ namespace Todo
 		{
 			InitializeComponent();
 
+			List<TodoItem> datePickedList = App.Database.GetItems().ToList();
+			foreach (TodoItem t in datePickedList.ToList())
+			{
+				if (!t.TimeStamp.Year.ToString().Equals(dPicked.Year))
+					datePickedList.Remove(t);
+				else if (!t.TimeStamp.Month.ToString().Equals(dPicked.Month))
+					datePickedList.Remove(t);
+				else if (!t.TimeStamp.Day.ToString().Equals(dPicked.Day) && dPicked.Day != null)
+					datePickedList.Remove(t);
+			}
+
+			listView.ItemsSource = datePickedList;
+
 			#region toolbar
 			ToolbarItem tbi = null;
 			if (Device.OS == TargetPlatform.iOS)
@@ -60,20 +73,22 @@ namespace Todo
 				}, 0, 0);
 				ToolbarItems.Add(tbi2);
 			}
+
+			if (Device.OS == TargetPlatform.iOS)
+			{
+				var tbi3 = new ToolbarItem("Mileage", "mileage.png", async () =>
+				{
+					int totalMileage = 0;
+					foreach (TodoItem t in datePickedList.ToList())
+					{
+						totalMileage += (Int32.Parse(t.EO) - Int32.Parse(t.SO));
+					}
+					await DisplayAlert("TotalMileage", totalMileage.ToString(), null, "I see");
+				}, 0, 0);
+				ToolbarItems.Add(tbi3);
+			}
 			#endregion
 
-			List<TodoItem> datePickedList = App.Database.GetItems().ToList();
-			foreach (TodoItem t in datePickedList.ToList())
-			{
-				if (!t.TimeStamp.Year.ToString().Equals(dPicked.Year))
-					datePickedList.Remove(t);
-				else if (!t.TimeStamp.Month.ToString().Equals(dPicked.Month))
-					datePickedList.Remove(t);
-				else if (!t.TimeStamp.Day.ToString().Equals(dPicked.Day))
-					datePickedList.Remove(t);
-			}
-
-			listView.ItemsSource = datePickedList;
 		}
 
 		void listItemSelected(object sender, SelectedItemChangedEventArgs e)

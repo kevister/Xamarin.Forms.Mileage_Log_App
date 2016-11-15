@@ -3,8 +3,8 @@
   <AndroidApiLevel>23</AndroidApiLevel>
   <AndroidApiLevelName>23</AndroidApiLevelName>
   <AndroidNdkPath />
-  <AndroidSdkBuildToolsPath>/Users/Kevin/Library/Android/sdk/build-tools/24.0.1</AndroidSdkBuildToolsPath>
-  <AndroidSdkBuildToolsBinPath>/Users/Kevin/Library/Android/sdk/build-tools/24.0.1</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkBuildToolsPath>/Users/Kevin/Library/Android/sdk/build-tools/25.0.0</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>/Users/Kevin/Library/Android/sdk/build-tools/25.0.0</AndroidSdkBuildToolsBinPath>
   <AndroidSdkPath>/Users/Kevin/Library/Android/sdk</AndroidSdkPath>
   <JavaSdkPath>/usr</JavaSdkPath>
   <MonoAndroidBinPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/bin</MonoAndroidBinPath>
@@ -13,7 +13,7 @@
     <ReferenceAssemblyPath>/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/</ReferenceAssemblyPath>
   </ReferenceAssemblyPaths>
   <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
-  <ZipAlignPath>/Users/Kevin/Library/Android/sdk/build-tools/24.0.1</ZipAlignPath>
+  <ZipAlignPath>/Users/Kevin/Library/Android/sdk/build-tools/25.0.0</ZipAlignPath>
   <MonoAndroidIncludePath />
   <SupportedApiLevel>23</SupportedApiLevel>
   <AndroidSequencePointsMode>None</AndroidSequencePointsMode>

@@ -14,6 +14,7 @@ namespace Todo
 		public string SO { get; set; }
 		public string EO { get; set; }
 		public string Comments { get; set; }
+		public string Label { get; set;}
 		public DateTime TimeStamp { get; set; }
 
 	}

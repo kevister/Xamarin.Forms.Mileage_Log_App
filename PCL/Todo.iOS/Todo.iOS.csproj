@@ -143,6 +143,7 @@
     <BundleResource Include="Resources\calendar.png" />
     <BundleResource Include="Resources\menu.png" />
     <BundleResource Include="Resources\export20.png" />
+    <BundleResource Include="Resources\mileage.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

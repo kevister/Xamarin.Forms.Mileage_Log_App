@@ -14,6 +14,7 @@ namespace Todo
         public TodoItemListX()
         {
             InitializeComponent();
+			NavigationPage.SetHasNavigationBar(this, true);
 
             #region toolbar
             ToolbarItem tbi = null;
