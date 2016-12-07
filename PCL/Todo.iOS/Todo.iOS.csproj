@@ -155,6 +155,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TextToSpeech_iOS.cs" />
     <Compile Include="SQLite_iOS.cs" />
+    <Compile Include="Email_iOS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
