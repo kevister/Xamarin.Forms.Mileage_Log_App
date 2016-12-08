@@ -3,6 +3,6 @@ namespace Todo
 {
 	public interface IEmail
 	{
-		void sendEmail();
+		void sendEmail(TodoItem todoItemMail);
 	}
 }

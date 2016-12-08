@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using Todo;
 using MessageUI;
 using UIKit;
+using System.IO;
+using Foundation;
 
 [assembly: Dependency(typeof(Email_iOS))]
 
@@ -15,18 +17,31 @@ namespace Todo
 		public Email_iOS()
 		{
 		}
-		public void sendEmail()
+		public void sendEmail(TodoItem todoItemMail)
 		{
-			Device.OpenUri(new Uri("mailto:ryan.hatfield@test.com"));
 
 			if (MFMailComposeViewController.CanSendMail)
 			{
+				var comments = todoItemMail.Comments.Replace(' ', '_').Replace('\n', '_');
+
+				var attachmentName = comments + "_" + todoItemMail.TimeStamp.ToString("yyyyMMdd") + ".csv";
+				var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+				var fileName = Path.Combine(documents, attachmentName);
+
+				var header = "Date,Start Odometer,End Odometer,Comments";
+				var body = header + "\n" + todoItemMail.TimeStamp.ToShortDateString() + "," + todoItemMail.SO + "," + todoItemMail.EO + "," + todoItemMail.Comments.Replace('\n', '_');
+
+				File.WriteAllText(fileName, body);
+
 				mailController = new MFMailComposeViewController();
 
-				// do mail operations here
-				//mailController.SetToRecipients(new string[] { "john@doe.com" });
-				mailController.SetSubject("mail test");
+				mailController.SetSubject("Mileage Data : " + attachmentName);
 				mailController.SetMessageBody("this is a test", false);
+				if (File.Exists(fileName))
+				{
+					NSData data = NSData.FromFile(fileName);
+					mailController.AddAttachmentData(data, documents, attachmentName);
+				}
 
 				mailController.Finished += (object s, MFComposeResultEventArgs args) =>
 				{
@@ -36,6 +51,8 @@ namespace Todo
 
 				UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(mailController, true, null);
 			}
+
 		}
 	}
 }
+

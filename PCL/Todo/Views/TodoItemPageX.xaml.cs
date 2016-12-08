@@ -9,6 +9,7 @@ namespace Todo
     public partial class TodoItemPageX : ContentPage
     {
 		private DateTime dateSelected;
+		private TodoItem todoItemLocal;
 
         public TodoItemPageX()
         {
@@ -26,6 +27,13 @@ namespace Todo
 			//	}, 0, 0);
 			//}
 			//#endregion
+		}
+
+		public TodoItemPageX(TodoItem todoItemInput)
+		{
+			InitializeComponent();
+
+			this.todoItemLocal = todoItemInput;
 		}
 
 		void DateSelected(object sender, Xamarin.Forms.DateChangedEventArgs e)
@@ -113,7 +121,7 @@ namespace Todo
 			//	Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("GettingStared.xlsx", "application/msexcel", stream);
 			//}
 
-			DependencyService.Get<IEmail>().sendEmail();
+			DependencyService.Get<IEmail>().sendEmail(this.todoItemLocal);
 			
 		}
 
@@ -122,13 +130,6 @@ namespace Todo
             var todoItem = (TodoItem)BindingContext;
             this.Navigation.PopAsync();
         }
-
-
-        //void speakClicked(object sender, EventArgs e)
-        //{
-        //    var todoItem = (TodoItem)BindingContext;
-        //    DependencyService.Get<ITextToSpeech>().Speak(todoItem.SO + " " + todoItem.EO);
-        //}
 
     }
 }

@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.089AAE54-85FB-4B14-8F3C-4B5C8D0311C8" />
+  <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.a7319a92c9068ae43704667287127dcf20a26540" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
     <Files>
-      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="1" Column="1" />
-      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="17" Column="47" />
-      <File FileName="Todo.iOS/Email_iOS.cs" Line="23" Column="5" />
+      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="89" Column="54" />
+      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="136" Column="1" />
+      <File FileName="Todo.iOS/Email_iOS.cs" Line="27" Column="94" />
       <File FileName="Todo.iOS/Main.cs" Line="16" Column="1" />
       <File FileName="Todo/Models/TodoItem.cs" Line="1" Column="1" />
+      <File FileName="Todo/IEmail.cs" Line="6" Column="39" />
       <File FileName="PCL Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

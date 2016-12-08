@@ -86,7 +86,7 @@ namespace Todo
         void listItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var todoItem = (TodoItem)e.SelectedItem;
-            var todoPage = new TodoItemPageX();
+            var todoPage = new TodoItemPageX(todoItem);
             todoPage.BindingContext = todoItem;
 
             ((App)App.Current).ResumeAtTodoId = todoItem.ID;
