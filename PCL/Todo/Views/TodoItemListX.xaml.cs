@@ -56,13 +56,6 @@ namespace Todo
             {
                 var tbi2 = new ToolbarItem("Calendar", "calendar.png", async () =>
 				{
-					//DatePicker datePicker = new DatePicker
-					//{
-					//	Format = "yyyy-MM-dd",
-					//	VerticalOptions = LayoutOptions.CenterAndExpand,
-					//	IsVisible = true,
-					//	IsEnabled = true,
-					//};
 					var action = await DisplayActionSheet("Search by ...", "Cancel", null, "Month", "Day");
 					var datePicked = new DatePicked();
 					var datepickerPage = new DatePickerPage(action);

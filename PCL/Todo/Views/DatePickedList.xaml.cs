@@ -30,11 +30,7 @@ namespace Todo
 			{
 				tbi = new ToolbarItem("export", "export20.png", () =>
 				{
-					var todoItem = new TodoItem();
-					todoItem.TimeStamp = DateTime.Now;
-					var todoPage = new TodoItemPageX();
-					todoPage.BindingContext = todoItem;
-					Navigation.PushAsync(todoPage);
+					DependencyService.Get<IEmail>().sendEmail(datePickedList, dPicked);
 				}, 0, 0);
 			}
 			//if (Device.OS == TargetPlatform.Android)
