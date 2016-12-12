@@ -37,7 +37,7 @@ namespace Todo
 				mailController = new MFMailComposeViewController();
 
 				mailController.SetSubject("Mileage Data : " + attachmentName);
-				mailController.SetMessageBody("this is a test", false);
+				//mailController.SetMessageBody("this is a test", false);
 				if (File.Exists(fileName))
 				{
 					NSData data = NSData.FromFile(fileName);

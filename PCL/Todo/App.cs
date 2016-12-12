@@ -1,6 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Todo
 {
@@ -14,10 +16,16 @@ namespace Todo
 			Resources.Add ("primaryGreen", Color.FromHex("91CA47"));
 			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
 
-			var nav = new NavigationPage (new HomePage ());
 			//nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
 			//nav.BarTextColor = Color.Black;
+			List<TodoItem> datePickedList = App.Database.GetItems().ToList();
+			foreach (TodoItem t in datePickedList.ToList())
+			{
+				if (t.Comments == null && t.EO == null && t.Label == null && t.SO == null)
+					App.Database.DeleteItem(t.ID);
+			}
 
+			var nav = new NavigationPage(new MDPage());
 			MainPage = nav;
 		}
 
@@ -54,12 +62,12 @@ namespace Todo
 						todoPage.BindingContext = Database.GetItem(ResumeAtTodoId);
 
 						MainPage.Navigation.PushAsync(
-							new HomePage(), false); // no animation
+							new MDPage(), false); // no animation
 					}
 				}
 			}
 			else {
-				MainPage.Navigation.PushAsync(new HomePage(), false);
+				MainPage.Navigation.PushAsync(new MDPage(), false);
 			}
 		}
 		protected override void OnSleep()

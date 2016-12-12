@@ -79,7 +79,7 @@ namespace Todo
 					{
 						totalMileage += (Int32.Parse(t.EO) - Int32.Parse(t.SO));
 					}
-					await DisplayAlert("TotalMileage", totalMileage.ToString(), null, "I see");
+					await DisplayAlert("TotalMileage", totalMileage.ToString(), null, "Okay");
 				}, 0, 0);
 				ToolbarItems.Add(tbi3);
 			}

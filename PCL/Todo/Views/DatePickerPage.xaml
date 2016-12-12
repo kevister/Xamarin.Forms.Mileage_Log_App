@@ -4,9 +4,12 @@
 		x:Class="Todo.DatePickerPage">
 	<ContentPage.Content>
 		<StackLayout>
-			<Entry x:Name="PickYear" Placeholder="Year" Text="{Binding Year}"></Entry>
-			<Entry x:Name="PickMonth" Placeholder="Month" Text="{Binding Month}"></Entry>
-			<Entry x:Name="PickDay" Placeholder="Day" Text="{Binding Day}"></Entry>
+			<Label ></Label>
+			<Label ></Label>
+			<Label ></Label>
+			<Entry x:Name="PickYear" Placeholder="Year, e.g. 2016" Text="{Binding Year}"></Entry>
+			<Entry x:Name="PickMonth" Placeholder="Month, e.g. 12" Text="{Binding Month}"></Entry>
+			<Entry x:Name="PickDay" Placeholder="Day, e.g. 31" Text="{Binding Day}"></Entry>
 
 			<Button Text="Done" Clicked="doneClicked"></Button>
 		</StackLayout>

@@ -39,7 +39,6 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "Default@2x.png",
       "size": "320x480",
       "scale": "2x",
       "idiom": "iphone"
