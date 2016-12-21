@@ -20,6 +20,7 @@ namespace Todo
             ToolbarItem tbi = null;
             if (Device.OS == TargetPlatform.iOS)
             {
+				//add a new item
                 tbi = new ToolbarItem("+", "add.png", () =>
                 {
                     var todoItem = new TodoItem();
@@ -54,12 +55,13 @@ namespace Todo
 
             if (Device.OS == TargetPlatform.iOS)
             {
+				//the search function, either by month or by date
                 var tbi2 = new ToolbarItem("Calendar", "calendar.png", async () =>
 				{
 					var action = await DisplayActionSheet("Search by ...", "Cancel", null, "Month", "Day");
 					var datePicked = new DatePicked();
-					var datepickerPage = new DatePickerPage(action);
-					datepickerPage.BindingContext = datePicked;
+					var datepickerPage = new DatePickerPage(action);	//passes the "action", which is either Month or Day
+					datepickerPage.BindingContext = datePicked;			//bind the DateTime info to the 
 					if (Navigation != null)
 						await Navigation.PushAsync(datepickerPage);
 				}, 0, 0);

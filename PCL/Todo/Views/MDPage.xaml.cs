@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace Todo
 {
+	// the Master-Detail page
 	public partial class MDPage : MasterDetailPage
 	{
 		public MDPage()

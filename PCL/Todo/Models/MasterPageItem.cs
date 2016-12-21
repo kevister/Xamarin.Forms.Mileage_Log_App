@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 namespace Todo
 {
+	// needed for the detail pages on the Master-detail page
 	public class MasterPageItem
 	{
 

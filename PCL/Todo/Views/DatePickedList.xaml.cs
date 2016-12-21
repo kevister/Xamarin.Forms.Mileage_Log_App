@@ -5,16 +5,17 @@ using Xamarin.Forms;
 
 namespace Todo
 {
+	// shows the list of items that matched the selected date or month
 	public partial class DatePickedList : ContentPage
 	{
 		public DatePickedList(DatePicked dPicked)
 		{
 			InitializeComponent();
 
-			List<TodoItem> datePickedList = App.Database.GetItems().ToList();
+			List<TodoItem> datePickedList = App.Database.GetItems().ToList();			//take all the entries
 			foreach (TodoItem t in datePickedList.ToList())
 			{
-				if (!t.TimeStamp.Year.ToString().Equals(dPicked.Year))
+				if (!t.TimeStamp.Year.ToString().Equals(dPicked.Year))					//match the Year, month and possibly the day
 					datePickedList.Remove(t);
 				else if (!t.TimeStamp.Month.ToString().Equals(dPicked.Month))
 					datePickedList.Remove(t);
@@ -34,24 +35,7 @@ namespace Todo
 				}, 0, 0);
 			}
 			//if (Device.OS == TargetPlatform.Android)
-			//{ // BUG: Android doesn't support the icon being null
-			//	tbi = new ToolbarItem("+", "plus", () =>
-			//	{
-			//		var todoItem = new TodoItem();
-			//		var todoPage = new TodoItemPageX();
-			//		todoPage.BindingContext = todoItem;
-			//		Navigation.PushAsync(todoPage);
-			//	}, 0, 0);
-			//}
-			//if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-			//{
-			//	tbi = new ToolbarItem("Add", "add.png", () =>
-			//	{
-			//		var todoItem = new TodoItem();
-			//		var todoPage = new TodoItemPageX();
-			//		todoPage.BindingContext = todoItem;
-			//		Navigation.PushAsync(todoPage);
-			//	}, 0, 0);
+			//{ 
 			//}
 
 			ToolbarItems.Add(tbi);
@@ -70,6 +54,7 @@ namespace Todo
 				ToolbarItems.Add(tbi2);
 			}
 
+			//calculates the total mileage
 			if (Device.OS == TargetPlatform.iOS)
 			{
 				var tbi3 = new ToolbarItem("Mileage", "mileage.png", async () =>
@@ -77,7 +62,8 @@ namespace Todo
 					int totalMileage = 0;
 					foreach (TodoItem t in datePickedList.ToList())
 					{
-						totalMileage += (Int32.Parse(t.EO) - Int32.Parse(t.SO));
+						if (t.EO != null && t.SO != null)
+							totalMileage += (Int32.Parse(t.EO) - Int32.Parse(t.SO));
 					}
 					await DisplayAlert("TotalMileage", totalMileage.ToString(), null, "Okay");
 				}, 0, 0);
@@ -94,16 +80,8 @@ namespace Todo
 			todoPage.BindingContext = todoItem;
 
 			((App)App.Current).ResumeAtTodoId = todoItem.ID;
-			//Debug.WriteLine("setting ResumeAtTodoId = " + todoItem.ID);
 
 			Navigation.PushAsync(todoPage);
 		}
-		//protected override void OnAppearing()
-		//{
-		//	base.OnAppearing();
-		//	// reset the 'resume' id, since we just want to re-start here
-		//	((App)App.Current).ResumeAtTodoId = -1;
-		//	listView.ItemsSource = App.Database.GetItems();
-		//}
 	}
 }

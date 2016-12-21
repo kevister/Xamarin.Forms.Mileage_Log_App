@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		x:Class="Todo.LinkPage"
-		Title="Links">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.LinkPage" Title="Links">
 	<ContentPage.Content>
-		<Label Text="http://www.google.com" x:Name="link"></Label>
+		<StackLayout>
+			<Label></Label>
+			<Label></Label>
+			<Label></Label>
+			<Label Text="Port Status:"></Label>
+			<Label Text="http://abc-ni-01.osc.tac.net/~t835450/Port_status/Query_result.php" x:Name="link" TextColor="Blue"></Label>
+			<Label Text="Customer Count:"></Label>
+			<Label Text="http://abc-ni-01.osc.tac.net/~t835450/Customer_Count/" x:Name="link1" TextColor="Blue"></Label>
+			<Label Text="E-Fulfillment:"></Label>
+			<Label Text="http://efulfillment.tsl.telus.com/" x:Name="link2" TextColor="Blue"></Label>
+			<Label Text="Site Logs:"></Label>
+			<Label Text="http://supplypartnermanagementwest-pr.tsl.telus.com/telus-sitelog-web/categories" x:Name="link3" TextColor="Blue"></Label>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

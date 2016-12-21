@@ -2,6 +2,7 @@
 
 namespace Todo
 {
+	//interface for email dependency service
 	public interface IEmail
 	{
 		void sendEmail(TodoItem todoItemMail);

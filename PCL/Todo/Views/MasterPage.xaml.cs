@@ -14,6 +14,7 @@ namespace Todo
 		{
 			InitializeComponent();
 
+			//the detail pages
 			var masterPageItems = new List<MasterPageItem>();
 			masterPageItems.Add(new MasterPageItem
 			{

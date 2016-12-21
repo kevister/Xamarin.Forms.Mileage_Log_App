@@ -67,8 +67,9 @@
     <WarningLevel>4</WarningLevel>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: TELUS Communications Company</CodesignKey>
     <AssemblyName>QuickTodoiOS</AssemblyName>
+    <CodesignProvision>0cfa9e8e-3af0-45bb-814d-4e21aac43244</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>full</DebugType>
@@ -187,13 +188,13 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-setting-29.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-setting-58.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-setting-87.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60-120.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-60-180.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launchscreen-640:960.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\launchscreen - 640:1136.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="mailkit">

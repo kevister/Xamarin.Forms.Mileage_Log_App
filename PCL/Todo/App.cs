@@ -16,8 +16,7 @@ namespace Todo
 			Resources.Add ("primaryGreen", Color.FromHex("91CA47"));
 			Resources.Add ("primaryDarkGreen", Color.FromHex ("6FA22E"));
 
-			//nav.BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"];
-			//nav.BarTextColor = Color.Black;
+			// this is to delete any garbage entries (entries with nothing in it) at the start of the application
 			List<TodoItem> datePickedList = App.Database.GetItems().ToList();
 			foreach (TodoItem t in datePickedList.ToList())
 			{
@@ -42,11 +41,6 @@ namespace Todo
 
 		protected override void OnStart()
 		{
-			Debug.WriteLine ("OnStart");
-
-			// always re-set when the app starts
-			// users expect this (usually)
-			//			Properties ["ResumeAtTodoId"] = "";
 			if (Properties.ContainsKey("ResumeAtTodoId"))
 			{
 				var rati = Properties["ResumeAtTodoId"].ToString();

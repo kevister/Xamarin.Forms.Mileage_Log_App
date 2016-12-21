@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{1902913C-BB6F-4CCB-9B90-1D0CAEECAF12}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.a7319a92c9068ae43704667287127dcf20a26540" />
+  <MonoDevelop.Ide.ItemProperties.Targets.Todo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PCL Status">
     <Files>
-      <File FileName="Todo/Views/TodoItemPageX.xaml.cs" Line="46" Column="55" />
-      <File FileName="Todo.iOS/Email_iOS.cs" Line="40" Column="49" />
-      <File FileName="Todo/Views/DatePickedList.xaml.cs" Line="12" Column="26" />
-      <File FileName="Todo/Views/DatePickerPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Todo/App.cs" Line="70" Column="45" />
+      <File FileName="Todo/Views/MDPage.xaml.cs" Line="23" Column="41" />
+      <File FileName="Todo/Views/MasterPage.xaml.cs" Line="31" Column="7" />
+      <File FileName="Todo/Views/ExportPage.xaml.cs" Line="16" Column="71" />
+      <File FileName="Todo/Views/DatePickerPage.xaml.cs" Line="32" Column="36" />
+      <File FileName="Todo/Views/TodoItemListX.xaml.cs" Line="59" Column="66" />
+      <File FileName="Todo/IEmail.cs" Line="5" Column="42" />
+      <File FileName="Todo/Models/DateViewModel.cs" Line="1" Column="1" />
+      <File FileName="Todo/Models/DatePicked.cs" Line="6" Column="90" />
+      <File FileName="Todo/Models/MasterPageItem.cs" Line="7" Column="58" />
+      <File FileName="Todo.iOS/Email_iOS.cs" Line="106" Column="61" />
       <File FileName="PCL Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
